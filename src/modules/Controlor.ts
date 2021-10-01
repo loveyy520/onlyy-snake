@@ -14,6 +14,7 @@ export default class Controlor {
     snake: Snake
     food: Food
     scorePanel: ScorePanel
+    givenDirections: number[] = []
     moveDirection = 0
     private moveAble: boolean = true
     private isGameOver: boolean
@@ -57,8 +58,12 @@ export default class Controlor {
                 if (this.moveAble) { this.run() }
                 break
         }
-        thisDerection !== 0 && thisDerection !== -this.moveDirection && (this.moveDirection = thisDerection)
 
+        if (this.givenDirections.length > 0) {
+            thisDerection !== 0 && thisDerection !== this.givenDirections[0] && thisDerection !== -this.givenDirections[0] && this.givenDirections.push(thisDerection)
+        } else {
+            thisDerection !== 0 && thisDerection !== -this.moveDirection && thisDerection !== this.moveDirection && this.givenDirections.push(thisDerection)
+        }
     }
     // 跑起来
     run = () => {
@@ -83,7 +88,9 @@ export default class Controlor {
         }
         if (this.moveAble) {
             this.timer = setTimeout(() => {
-
+                if (this.givenDirections.length > 0) {
+                    this.moveDirection = this.givenDirections.shift() as number
+                }
                 clearTimeout(Number(this.timer))
                 this.run()
             }, 300 - (this.scorePanel.level - 1) * 5);
