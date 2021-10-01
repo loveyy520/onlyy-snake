@@ -1,0 +1,44 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "core-js": "^3.18.0",
+    "html-webpack-plugin": "^5.3.2",
+    "postcss-pxtorem": "^5.1.1",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.3",
+    "webpack": "^5.54.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.1"
+  },
+  "mode": "development",
+  "name": "ts_snake",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "braces": "^3.0.2",
+    "css-loader": "^6.3.0",
+    "fill-range": "^7.0.1",
+    "is-number": "^7.0.0",
+    "less": "^4.1.1",
+    "less-loader": "^10.0.1",
+    "micromatch": "^4.0.4",
+    "picomatch": "^2.3.0",
+    "postcss": "^8.3.8",
+    "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "style-loader": "^3.3.0",
+    "to-regex-range": "^5.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack serve --open"
+  },
+  "keywords": [],
+  "author": "ChrisLey",
+  "license": "ISC",
+  "description": "拿贪吃蛇练练手"
+}

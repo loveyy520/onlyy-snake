@@ -1,0 +1,102 @@
+// 设置变量
+@bg-color: #b7d4a8;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: bold 20px "Courier";
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 360px;
+    height: 420px;
+    background-color: #ffe5ec;
+    margin: 100px auto;
+    border: 10px solid #6e506c;
+    border-radius: 40px;
+
+    header {
+        color: #8a68b8;
+        width: 30%;
+        border-radius: 12.5px;
+        text-align: center;
+        letter-spacing: 0.5em;
+        padding-left: 0.5em;
+        background-color: #debdf180;
+        box-shadow: 1px 1px 1px;
+        margin: auto;
+    }
+
+    .stage {
+        box-shadow: 2px 2px 2px #cacaca;
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        background-color: #ffecfe;
+        cursor: none;
+
+        #snake {
+            #head {
+                position: relative;
+                z-index: 2;
+                background-color: #1f678df2;
+                text-align: center;
+                /* box-sizing: border-box; */
+                line-height: 8px;
+                font-size: 1px;
+                color: #c3fcff;
+                left: 140px;
+                top: 140px;
+            }
+
+            &>div {
+                width: 10px;
+                height: 10px;
+                border-radius: 4px;
+                background-color: #404a81;
+                border: 1px solid @bg-color;
+                position: absolute;
+            }
+
+
+        }
+
+        .food {
+            display: none;
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background-color: #ff0000;
+            transform: rotate(45deg);
+
+            &>div {
+                width: 4.5px;
+                height: 4.5px;
+                background-color: #ffecfe;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    .score-panel {
+        display: flex;
+
+        margin: 15px;
+        justify-content: space-between;
+    }
+}
