@@ -1,3 +1,12 @@
+# for release
+.gitee
+src
+package-lock.json
+tsconfig.json
+webpack.config.json
+yarn.lock
+
+
 # Build and Release Folders
 bin-debug/
 bin-release/
